@@ -16,7 +16,7 @@ altura_tela = 500
 altura_painel = 60
 
 # Velocidade do Jogo
-velocidade_inicial = 1
+velocidade_inicial = 0.4
 
 # Definindo propriedades do BOTÃO (START)
 botao_largura = 60
@@ -134,11 +134,11 @@ while rodando:
 
             # Lógica do BOTÃO SLOW        
             if button_slow_rect.collidepoint(evento.pos):
-                velocidade_atual = 0.03
+                velocidade_atual = 0.04
             
             # Lógica do BOTÃO FAST
             if botao2_rect.collidepoint(evento.pos):
-                velocidade_atual = 0.08
+                velocidade_atual = 0.25
 
 
     # Pinta o fundo da tela de preto
@@ -198,7 +198,7 @@ while rodando:
             lista_particulas.append(Particula(largura_tela / 2, altura_tela / 2))
         
         # Avisamos que a explosão já foi iniciada ( para não criar mais)
-        
+        explosao_iniciada = True
     
     # MENSAGEM DE VITÓRIA
     if vencedor:
